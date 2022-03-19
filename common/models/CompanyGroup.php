@@ -1,23 +1,23 @@
 <?php
 
-namespace app\models;
+namespace common\models;
 
 use Yii;
 
 /**
- * This is the model class for table "appeal_boshqa_tashkilot_group".
+ * This is the model class for table "company_group".
  *
  * @property int $id
  * @property string $name
  */
-class AppealBoshqaTashkilotGroup extends \yii\db\ActiveRecord
+class CompanyGroup extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'appeal_boshqa_tashkilot_group';
+        return 'company_group';
     }
 
     /**
@@ -38,10 +38,7 @@ class AppealBoshqaTashkilotGroup extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Номи',
+            'name' => 'Name',
         ];
-    }
-    public function getTashkilotlar(){
-        return $this->hasMany(AppealBoshqaTashkilot::className(),['group_id'=>'id']);
     }
 }

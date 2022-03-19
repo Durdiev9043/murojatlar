@@ -1,24 +1,22 @@
 <?php
 
-namespace app\models;
-
+namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "company_type".
+ * This is the model class for table "bulim".
  *
  * @property int $id
  * @property string $name
- * @property int $group_id
  */
-class CompanyType extends \yii\db\ActiveRecord
+class Bulim extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'company_type';
+        return 'bulim';
     }
 
     /**
@@ -27,8 +25,7 @@ class CompanyType extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'group_id'], 'required'],
-            [['group_id'], 'integer'],
+            [['name'], 'required'],
             [['name'], 'string', 'max' => 255],
         ];
     }
@@ -40,11 +37,7 @@ class CompanyType extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Номи',
-            'group_id' => 'Гуруҳ',
+            'name' => 'бўлим номи',
         ];
-    }
-    public function getGroup(){
-        return $this->hasOne(CompanyGroup::className(),['id'=>'group_id']);
     }
 }

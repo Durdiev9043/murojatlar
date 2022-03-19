@@ -1,23 +1,23 @@
 <?php
 
-namespace app\models;
+namespace common\models;
 
 use Yii;
 
 /**
- * This is the model class for table "lavozim".
+ * This is the model class for table "appeal_type".
  *
  * @property int $id
  * @property string $name
  */
-class Lavozim extends \yii\db\ActiveRecord
+class AppealType extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'lavozim';
+        return 'appeal_type';
     }
 
     /**

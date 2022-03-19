@@ -11,6 +11,14 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
+        'company' => [
+            'class' => 'app\modules\company\Module',
+        ],
+    ],
     'components' => [
         'request' => [
             'baseUrl'=>'',
@@ -39,7 +47,7 @@ return [
         ],
 
         'urlManager' => [
-            'scriptUrl'=>'/index.php',
+//            'scriptUrl'=>'/index.php',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [

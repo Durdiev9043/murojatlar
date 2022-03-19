@@ -1,24 +1,23 @@
 <?php
 
-namespace app\models;
+namespace common\models;
 
 use Yii;
 
 /**
- * This is the model class for table "nation".
+ * This is the model class for table "appeal_boshqa_tashkilot_group".
  *
  * @property int $id
  * @property string $name
- * @property int $count
  */
-class Nation extends \yii\db\ActiveRecord
+class AppealBoshqaTashkilotGroup extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'nation';
+        return 'appeal_boshqa_tashkilot_group';
     }
 
     /**
@@ -28,7 +27,6 @@ class Nation extends \yii\db\ActiveRecord
     {
         return [
             [['name'], 'required'],
-            [['count'], 'integer'],
             [['name'], 'string', 'max' => 255],
         ];
     }
@@ -40,8 +38,10 @@ class Nation extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'count' => 'Count',
+            'name' => 'Номи',
         ];
+    }
+    public function getTashkilotlar(){
+        return $this->hasMany(AppealBoshqaTashkilot::className(),['group_id'=>'id']);
     }
 }

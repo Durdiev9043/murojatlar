@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace common\models;
 
 use Symfony\Component\Console\Question\Question;
 use Yii;
