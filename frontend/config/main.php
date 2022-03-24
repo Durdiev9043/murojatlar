@@ -18,6 +18,9 @@ return [
         'company' => [
             'class' => 'app\modules\company\Module',
         ],
+        'user' => [
+            'class' => 'app\modules\user\Module',
+        ],
     ],
     'components' => [
         'request' => [

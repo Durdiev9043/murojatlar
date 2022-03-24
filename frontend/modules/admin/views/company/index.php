@@ -59,14 +59,14 @@ $this->params['breadcrumbs'][] = $this->title;
                                 'value'=>function($d){
                                     return $d->group->name;
                                 },
-                                'filter'=>\yii\helpers\ArrayHelper::map(\app\models\CompanyGroup::find()->all(),'id','name')
+                                'filter'=>\yii\helpers\ArrayHelper::map(\common\models\CompanyGroup::find()->all(),'id','name')
                             ],
                             [
                                 'attribute'=>'type_id',
                                 'value'=>function($d){
                                     return $d->type->name;
                                 },
-                                'filter'=>\yii\helpers\ArrayHelper::map(\app\models\CompanyType::find()->where(['group_id'=>$searchModel->group_id])->all(),'id','name')
+                                'filter'=>\yii\helpers\ArrayHelper::map(\common\models\CompanyType::find()->where(['group_id'=>$searchModel->group_id])->all(),'id','name')
                             ],
 
                             ['class' => 'yii\grid\ActionColumn'],

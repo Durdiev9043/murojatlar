@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Company */
+/* @var $model common\models\Company */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -24,8 +24,8 @@ use yii\widgets\ActiveForm;
 
             <?= $form->field($model, 'telegram')->textInput(['maxlength' => true]) ?>
 
-            <?= $form->field($model,'group_id')->dropDownList(\yii\helpers\ArrayHelper::map(\app\models\CompanyGroup::find()->all(),'id','name'),['prompt'=>'Ташкилот гуруҳини танланг'])?>
-            <?= $form->field($model,'type_id')->dropDownList(\yii\helpers\ArrayHelper::map(\app\models\CompanyType::find()->where(['group_id'=>$model->group_id])->all(),'id','name'),['prompt'=>'Ташкилот турини танланг'])?>
+            <?= $form->field($model,'group_id')->dropDownList(\yii\helpers\ArrayHelper::map(\common\models\CompanyGroup::find()->all(),'id','name'),['prompt'=>'Ташкилот гуруҳини танланг'])?>
+            <?= $form->field($model,'type_id')->dropDownList(\yii\helpers\ArrayHelper::map(\common\models\CompanyType::find()->where(['group_id'=>$model->group_id])->all(),'id','name'),['prompt'=>'Ташкилот турини танланг'])?>
 
             <?= $form->field($model, 'management')->checkbox(['value'=>1]) ?>
 
@@ -76,11 +76,11 @@ use yii\widgets\ActiveForm;
         <div class="col-md-6">
 
 
-            <?= $form->field($user, 'role_id')->dropDownList(\yii\helpers\ArrayHelper::map(\app\models\Role::find()->all(),'id','name')) ?>
+            <?= $form->field($user, 'role_id')->dropDownList(\yii\helpers\ArrayHelper::map(\common\models\Role::find()->all(),'id','name')) ?>
 
 
 
-            <?= $form->field($user, 'bulim_id')->dropDownList(\yii\helpers\ArrayHelper::map(\app\models\Bulim::find()->all(),'id','name')) ?>
+            <?= $form->field($user, 'bulim_id')->dropDownList(\yii\helpers\ArrayHelper::map(\common\models\Bulim::find()->all(),'id','name')) ?>
 
             <?= $form->field($user, 'lavozim_id')->dropDownList(\yii\helpers\ArrayHelper::map(\app\models\Lavozim::find()->all(),'id','name')) ?>
 
@@ -97,12 +97,7 @@ use yii\widgets\ActiveForm;
             <?= $form->field($user, 'is_control_system')->checkbox() ?>
         </div>
     </div>
-
-
-
 <?php }?>
-
-
 
     <div class="form-group">
         <?= Html::submitButton('Сақлаш', ['class' => 'btn btn-success']) ?>

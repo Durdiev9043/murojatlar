@@ -3,11 +3,11 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use app\widgets\Alert;
-use yii\bootstrap\Progress;
+use common\widgets\Alert;
+use yii\bootstrap4\Progress;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
+use yii\bootstrap4\Nav;
+use yii\bootstrap4\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
@@ -57,13 +57,11 @@ AppAsset::register($this);
                     "E-PILLA" axborot tizimi
                 </a>
             </li>
-
         </ul>
 
 
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
-
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
                     <i class="far fa-bell"></i>
@@ -119,7 +117,6 @@ AppAsset::register($this);
 
         <!-- Sidebar -->
         <div class="sidebar">
-
             <?=$this->render('_menu')?>
         </div>
         <!-- /.sidebar -->

@@ -20,7 +20,8 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-//        'css/site.css',
+        'css/sb-admin-2.css',
+        'css/sb-admin-2.min.css',
         '/theme/plugins/fontawesome-free/css/all.min.css',
         '/theme/plugins/overlayScrollbars/css/OverlayScrollbars.min.css',
         'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700',
@@ -31,7 +32,7 @@ class AppAsset extends AssetBundle
 //        '/theme/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css',
 //        '/theme/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css',
 //        '/theme/plugins/select2/css/select2.min.css',
-//        '/theme/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css',
+        '/theme/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css',
         '/theme/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.css',
         '/theme/plugins/select2/css/select2.min.css',
         '/theme/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css',
@@ -40,6 +41,8 @@ class AppAsset extends AssetBundle
         '/theme/dist/css/style.css',
     ];
     public $js = [
+        '/js/demo/chart-area-demo.js',
+        '/js/sb-admin-2.min.js',
 //        '/theme/plugins/jquery/jquery.min.js',
         '/theme/plugins/bootstrap/js/bootstrap.bundle.min.js',
         '/theme/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js',

@@ -4,7 +4,7 @@ namespace app\models\search;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Lavozim;
+use common\models\Lavozim;
 
 /**
  * LavozimSearch represents the model behind the search form of `app\models\Lavozim`.
